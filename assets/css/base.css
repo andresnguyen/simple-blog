@@ -1,0 +1,99 @@
+:root {
+    --white-color : #fff;
+    --black-color : #000;
+    --primary-color : #1abc9c;
+    --text-color : #2c3e50; 
+    --second-color : #2c3e50; 
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 104px; */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    padding: 0 2.4rem;
+    margin: 0 auto;
+}
+
+.row {
+    margin-left: -2.4rem;
+    margin-right: -2.4rem;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+}
+
+.col-one {
+    width: calc( 100% / 1 );
+}
+
+.col-two {
+    width: calc( 100% / 2 );
+}
+
+.col-three {
+    width: calc( 100% / 3 );
+}
+
+.col-four {
+    width: calc( 100% / 4 );
+}
+
+.text-white {
+    color: #fff  !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.mt-24 {
+    margin-top: 24px !important;
+}
+
+.mt-48 {
+    margin-top: 48px !important;
+}
+.f-right {
+    float: right !important;
+}
