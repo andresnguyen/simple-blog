@@ -2,6 +2,10 @@
 @import './mixins';
 @import './variables';
 
+.header-wrapper {
+	max-width: 1760px;
+	margin: 0 auto;
+}
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -20,6 +24,10 @@
 			color: #171717;
 			text-decoration: none;
 		}
+	}
+
+	button {
+		display: none;
 	}
 
 	.navlink {
@@ -263,7 +271,9 @@
 	margin-left: auto;
 
 	&__item {
-		margin-bottom: 70px;
+		&:not(:last-child) {
+			margin-bottom: 70px;
+		}
 	}
 
 	&__header {
@@ -449,3 +459,5 @@
 		color: $sub-text-color;
 	}
 }
+
+@import './queries';

@@ -19,10 +19,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.header-wrapper {
-  margin: 0 auto;
-}
-
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -35,6 +31,11 @@ html {
 body {
   font-family: "PT Serif", serif;
   font-size: 1.6rem;
+}
+
+.header-wrapper {
+  max-width: 1760px;
+  margin: 0 auto;
 }
 
 .header {
@@ -54,6 +55,9 @@ body {
   cursor: pointer;
   color: #171717;
   text-decoration: none;
+}
+.header button {
+  display: none;
 }
 .header .navlink {
   display: flex;
@@ -266,7 +270,7 @@ body {
   width: 24%;
   margin-left: auto;
 }
-.sidebar__item {
+.sidebar__item:not(:last-child) {
   margin-bottom: 70px;
 }
 .sidebar__header {
@@ -427,6 +431,121 @@ body {
   border-top: 1px solid #e5e5e5;
   font-size: 1.4rem;
   color: #666666;
+}
+
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {
+  .section-banner .text-box {
+    left: calc(100% / 2 - 100% / 2.3);
+  }
+
+  .container {
+    margin: 0 20px;
+  }
+
+  .blog-container {
+    max-width: 70%;
+    align-content: flex-start;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+}
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+  .blog-container {
+    max-width: 100%;
+    align-content: center;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+  .blog-wrapper {
+    flex-basis: 100%;
+  }
+
+  .section-banner .text-box {
+    left: 20px;
+  }
+  .section-banner .text-box__label {
+    font-size: 1rem;
+  }
+  .section-banner .text-box__title {
+    font-size: 2rem;
+    width: 35rem;
+    line-height: 2.7rem;
+    margin-bottom: 5px;
+  }
+  .section-banner .text-box__footer span,
+.section-banner .text-box__footer a {
+    font-size: 1.2rem;
+  }
+
+  .blog-wrapper {
+    padding: 0;
+  }
+
+  .pagination__item a {
+    font-size: 1.3rem;
+  }
+
+  .blog-wrapper--fluid {
+    display: none;
+  }
+
+  .header-wrapper .navlink {
+    display: none !important;
+  }
+  .header-wrapper .sticky .navlink {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .header-wrapper button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 1s;
+  }
+  .header-wrapper .header .navlink a {
+    padding-left: 0;
+  }
+  .header-wrapper .header {
+    padding: 0;
+    padding: 0 20px;
+    background-color: transparent;
+    height: auto;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    align-items: baseline;
+  }
+  .header-wrapper .header__logo {
+    font-size: 1.5rem;
+  }
+}
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+  section {
+    padding: 25px 0;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
